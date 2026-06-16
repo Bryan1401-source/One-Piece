@@ -1,3 +1,4 @@
+/* Configurações de Fundo (Dark) */
 body {
     margin: 0;
     padding: 0;
@@ -38,7 +39,7 @@ body {
 }
 
 .subtitle {
-    color: #b85cdb;
+    color: #ffee00;
     font-size: 0.9rem;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -47,6 +48,7 @@ body {
     text-align: center;
 }
 
+/* Seleção de Número com Setas */
 .controle-numero {
     display: flex;
     justify-content: center;
@@ -58,7 +60,7 @@ body {
 .btn-seta {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #3bb2f5;
+    color: #fbff00;
     font-size: 1.8rem;
     width: 50px;
     height: 50px;
@@ -71,7 +73,7 @@ body {
 }
 
 .btn-seta:hover {
-    background: #3bb2f5;
+    background: #eeff00;
     color: #000;
     transform: scale(1.1);
 }
@@ -85,6 +87,33 @@ body {
     text-shadow: 0 0 10px rgba(59, 178, 245, 0.3);
 }
 
+/* Abas de Modo */
+.modo-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.modo-btn {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.modo-btn.active {
+    background: linear-gradient(135deg, #b85cdb 0%, #f74c72 100%);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(184, 92, 219, 0.3);
+}
+
+/* Grade da Tabuada Gerada */
 .tabuada-grade {
     display: flex;
     flex-direction: column;
@@ -95,6 +124,7 @@ body {
     margin-bottom: 25px;
 }
 
+/* Linhas/Cartões da Tabuada com Animação de Entrada */
 .linha-tabuada {
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.03);
@@ -104,14 +134,15 @@ body {
     justify-content: space-between;
     font-size: 1.1rem;
     font-weight: 500;
-    animation: entrarCard 0.3s ease forwards;
+    animation: entrar Card 0.3s ease forwards;
 }
 
 .linha-tabuada span:last-child {
-    color: #3bb2f5;
+    color: #fbff00;
     font-weight: 700;
 }
 
+/* Área do Botão Externo */
 .area-externa {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 20px;
@@ -126,8 +157,8 @@ body {
 
 .btn-link {
     background: transparent;
-    border: 1px dashed #b85cdb;
-    color: #b85cdb;
+    border: 1px dashed #f74c72;
+    color: #f74c72;
     padding: 10px 20px;
     border-radius: 10px;
     font-weight: 600;
@@ -136,9 +167,7 @@ body {
 }
 
 .btn-link:hover {
-    background: rgba(184, 92, 219, 0.1);
-    border-color: #3bb2f5;
-    color: #3bb2f5;
+    background: rgba(247, 76, 114, 0.1);
     transform: translateY(-2px);
 }
 
