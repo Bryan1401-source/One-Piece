@@ -21,7 +21,7 @@ body {
     font-size: 2.6rem;
     font-weight: 800;
     margin-bottom: 20px;
-    background: linear-gradient(90deg, #3bb2f5 0%, #b85cdb 50%, #f74c72 100%);
+    background: linear-gradient(90deg, #4cf7e0 0%, #fdfdfd 50%, #4cf7e0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
