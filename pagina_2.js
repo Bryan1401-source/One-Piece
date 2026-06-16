@@ -1,34 +1,40 @@
-const numeroInput = document.getElementById('numeroInput');
-const botaoGerar = document.getElementById('GerarTabuada');
-const resultadoDiv = document.getElementById('resultadoTabuada');
+let numeroAtual = 5;
 
-botaoGerar.addEventListener('click', () => {
-
-    const numero = parseInt(numeroInput.value);
-
-
-    if (isNaN(numero)) {
-        resultadoDiv.innerHTML = '<p style="color: red;">Por favor, digite um número válido.</p>';
-        return;
-    }
-
-
-    resultadoDiv.innerHTML = '';
-
-    const titulo = document.createElement('h3');
-    titulo.textContent = `Tabuada de Subtração do ${numero}:`;
-    resultadoDiv.appendChild(titulo);
+function gerarTabuada() {
+    const grade = document.getElementById('grade-resultado');
+    grade.innerHTML = ''; 
 
     for (let i = 1; i <= 10; i++) {
- 
-        const minuendo = i;
-        const resultado = numero - minuendo;
+        let resultado = numeroAtual - i;
+
+        const linha = document.createElement('div');
+        linha.className = 'linha-tabuada';
+        linha.innerHTML = `
+            <span>${numeroAtual} - ${i}</span>
+            <span>= ${resultado}</span>
+        `;
         
-    
-        const linha = document.createElement('p');
-        linha.textContent = `${numero} - ${minuendo} = ${resultado}`;
-        
-    
-        resultadoDiv.appendChild(linha);
+        grade.appendChild(linha);
     }
-});
+}
+
+function alterarNumero(valor) {
+    numeroAtual += valor;
+    if (numeroAtual < 1) numeroAtual = 1;
+    document.getElementById('num-display').innerText = numeroAtual;
+    gerarTabuada();
+}
+
+function irParaSoma() {
+    window.location.href = "index.html";
+}
+
+function irParaPagina3() {
+    window.location.href = "pagina_3.html";
+}
+
+function irParaPagina4() {
+    window.location.href = "pagina_4.html";
+}
+
+window.onload = gerarTabuada;

@@ -1,5 +1,174 @@
-* {
+body {
     margin: 0;
     padding: 0;
+    background: radial-gradient(circle at top right, #1d0f36 0%, #080514 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+.tabuada-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
     box-sizing: border-box;
+}
+
+.title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #3bb2f5 0%, #b85cdb 50%, #f74c72 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.box-tabuada {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.subtitle {
+    color: #4cf7e0; 
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.controle-numero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.btn-seta {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #4cf7e0;
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.btn-seta:hover {
+    background: #4cf7e0;
+    color: #000;
+    transform: scale(1.1);
+}
+
+.numero-atual {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    min-width: 60px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(247, 76, 114, 0.3);
+}
+
+.tabuada-grade {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 260px;
+    overflow-y: auto;
+    padding-right: 5px;
+    margin-bottom: 25px;
+}
+
+.linha-tabuada {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 500;
+    animation: entrarCard 0.3s ease forwards;
+}
+
+.linha-tabuada span:last-child {
+    color: #4cf7e0;
+    font-weight: 700;
+}
+
+.area-navegacao {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.linhas-botoes {
+    display: flex;
+    width: 100%;
+}
+
+.linhas-botoes.dupla {
+    gap: 10px;
+}
+
+.btn-nav {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-nav:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-voltar {
+    border-color: rgba(59, 178, 245, 0.3);
+    color: #3bb2f5;
+}
+
+.btn-voltar:hover {
+    background: rgba(59, 178, 245, 0.1);
+    color: #3bb2f5;
+}
+
+.btn-avancar {
+    border-color: rgba(184, 92, 219, 0.3);
+    color: #b85cdb;
+}
+
+.btn-avancar:hover {
+    background: rgba(184, 92, 219, 0.1);
+    color: #b85cdb;
+}
+
+@keyframes entrarCard {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
