@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada - Multiplicação</title>
+    <link rel="stylesheet" href="pagina_3.css">
+</head>
+<body>
+
+    <div class="tabuada-container">
+        <h1 class="title">Calculadora Online</h1>
+        
+        <div class="box-tabuada">
+            <div class="subtitle">Tabuada de Multiplicação (×)</div>
+            
+            <div class="controle-numero">
+                <button class="btn-seta" onclick="alterarNumero(-1)">-</button>
+                <div class="numero-atual" id="num-display">5</div>
+                <button class="btn-seta" onclick="alterarNumero(1)">+</button>
+            </div>
+
+            <div class="tabuada-grade" id="grade-resultado">
+            </div>
+
+            <div class="area-navegacao">
+                <div class="linhas-botoes">
+                    <button class="btn-nav btn-voltar" onclick="irParaSoma()">🏠 Início (Soma)</button>
+                </div>
+                <div class="linhas-botoes dupla">
+                    <button class="btn-nav" onclick="irParaPagina2()">⬅️ Pág 2 (Subtração)</button>
+                    <button class="btn-nav btn-avancar" onclick="irParaPagina4()">Pág 4 (Divisão) ➡️</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="pagina_3.js"></script>
+</body>
+</html>
